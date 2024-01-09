@@ -1,28 +1,25 @@
 public class DtoB {
-    private int decimal;
-    private int binary;
+    
 
-    public DtoB(int decimal){
-        this.decimal = decimal;
+    public DtoB(){
+        
     }
 
-    public int dtoBinary(){
-        int base = 1;
-        binary = 0;
+    public static String dtoBinary( int decimal){
+        StringBuilder binary = new StringBuilder();
         int rem = 0;
         
 
         do{
             rem = decimal %2;
             decimal /= 2;
-            binary +=  (base *rem);
-            base *= 10;
+            binary.append(rem);
 
 
         }while(decimal != 0);
 
-
-        return binary;
+        binary.reverse();
+        return binary.toString();
     }
     
 }

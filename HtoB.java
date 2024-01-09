@@ -1,28 +1,19 @@
-import Conversion-Calculator.HtoD;
 public class HtoB{
     
-    private String hex;
+    
 
-    public HtoB(String hex){
-        this.hex = hex;
+    public HtoB(){
+        
 
     }
 
-    public String htoBinary( String hexaDecimal){
-        StringBuilder binary = new StringBuilder("");
-        StringBuilder hexa = new StringBuilder(hexaDecimal);
-        int decimal = hexa
-        
-        for (int i = 0; i < hexa.length(); i++)
-        {   
-
-
-        }
-
-
-
-        return binary.toString();
+    public static String htoBinary( String hexaDecimal){
+           
+        int decimal = HtoD.htoDecimal(hexaDecimal);
+        return DtoB.dtoBinary(decimal);
         
     }
+
+
 
 }

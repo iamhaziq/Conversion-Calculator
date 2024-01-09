@@ -7,18 +7,17 @@ public class BtoH {
     private int length; // length of binary
     private List<Integer> integerList = new ArrayList<>();
 
-    public BtoH(int binary) {
-        this.binary = binary;
-        setLength(binary);
+    public BtoH() {
+        
     }
 
-    private void setLength(int binary){
-        length = Integer.toString(binary).length();
-    }
+ 
 
-    public String btoHex(){
+    public static String btoHex(int binary){
+        List<Integer> integerList = new ArrayList<>();
         StringBuilder hex = new StringBuilder();
         int tempBinary = binary;
+        int length = Integer.toString(binary).length();;
 
         for (int i = 0; i < length / 4 + 1; i++) {
             integerList.add(BtoD.binarytoDecimal(tempBinary % 10000));

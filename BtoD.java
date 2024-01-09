@@ -1,27 +1,21 @@
 public class BtoD {
-    private int binary;
-    private int length; // lenght of binary
+    
 
-    public BtoD(int binary) {
-        this.binary = binary;
+    public BtoD() {
+        
         
 
         
     }
-    private static int getLength(int binary){
-        return Integer.toString(binary).length();
-        
-    }
 
 
-    public int toDecimal(){
-        length = getLength(binary);
-        return binarytoDecimal(binary);
-    }
+
+
 
     public static int binarytoDecimal(int binary){
        int number = 0;
-        int length = getLength(binary);
+       int length = Integer.toString(binary).length();
+        
         int divisor;
 
         

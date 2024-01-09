@@ -1,13 +1,14 @@
 public class DtoH{  
-    private int decimal;
-    private StringBuilder hex = new StringBuilder();
+    
+    
 
-    public DtoH(int decimal){
-        this.decimal = decimal;
+    public DtoH(){
+        
     }
 
-    public String dtoHex(){
+    public static String dtoHex( int decimal){
         int rem;
+        StringBuilder hex = new StringBuilder();
         do{
             rem = decimal %16;
             decimal /= 16;
