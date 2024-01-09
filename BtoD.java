@@ -8,25 +8,30 @@ public class BtoD {
 
         
     }
-    private int getLength(int binary){
+    private static int getLength(int binary){
         return Integer.toString(binary).length();
         
     }
 
 
     public int toDecimal(){
-        int number = 0;
         length = getLength(binary);
-        int tempBinary = binary;
+        return binarytoDecimal(binary);
+    }
+
+    public static int binarytoDecimal(int binary){
+       int number = 0;
+        int length = getLength(binary);
         int divisor;
+
         
         for ( int i = 0 ; i < length; i ++){
-            divisor = tempBinary%10;
+            divisor = binary%10;
             number += (divisor) *(Math.pow(2, i)); 
-            tempBinary /= 10;
+            binary /= 10;
         }
-
         return number;
+
     }
     
 
