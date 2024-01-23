@@ -2,12 +2,11 @@ public class HtoD {
 
     public HtoD(String hex) {
         this.hex = hex;
-
     }
 
     public static int htoDecimal(String hexaDecimal) {
 
-        StringBuilder hexa = new StringBuilder(hexaDecimal);
+        StringBuilder hexa = new StringBuilder(hexaDecimal.toUpperCase());
         hexa.reverse();
 
         int placevalue;
